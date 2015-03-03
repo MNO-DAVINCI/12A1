@@ -15,4 +15,5 @@ $anita = new Mens();
 $sjonnie = new Mens();
 
 $anita->naam = "Anita"; //dit mag alleen omdat naam public is!
+echo $anita->naam . "<br>";
 $anita->praat("Terror chick!"); //deze function aanroepen mag alleen vanwege public keyword!
