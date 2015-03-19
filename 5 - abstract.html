@@ -1,0 +1,41 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+abstract class Mens 
+{
+	private $naam;
+	private $leeftijd;
+}
+
+class Vrouw extends Mens
+{
+	public function __construct($naam, $leeftijd)
+	{
+		$this->naam = $naam;
+		$this->leeftijd = $leeftijd;
+	}
+
+	public function getNaam() 
+	{
+		return $this->naam;
+	}
+}
+
+class Man extends Mens
+{
+	public function __construct($naam, $leeftijd)
+	{
+		$this->naam = $naam;
+		$this->leeftijd = $leeftijd;
+	}
+
+	public function getNaam() 
+	{
+		return $this->naam;
+	}
+}
+
+$henk = new Man("Henk", 9);
+echo $henk->getNaam();
